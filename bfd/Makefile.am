@@ -72,8 +72,8 @@ BFD32_LIBS = \
 	archive.lo archures.lo bfd.lo bfdio.lo bfdwin.lo \
 	cache.lo coff-bfd.lo compress.lo corefile.lo format.lo hash.lo \
 	init.lo libbfd.lo linker.lo merge.lo opncls.lo reloc.lo \
-	section.lo simple.lo stab-syms.lo stabs.lo syms.lo targets.lo \
-	binary.lo ihex.lo srec.lo tekhex.lo verilog.lo
+	section.lo simple.lo stab-syms.lo stabs.lo strtab.lo syms.lo \
+	targets.lo binary.lo ihex.lo srec.lo tekhex.lo verilog.lo
 
 BFD64_LIBS = archive64.lo
 
@@ -81,7 +81,7 @@ BFD32_LIBS_CFILES = \
 	archive.c archures.c bfd.c bfdio.c bfdwin.c \
 	cache.c coff-bfd.c compress.c corefile.c format.c hash.c \
 	init.c libbfd.c linker.c merge.c opncls.c reloc.c \
-	section.c simple.c stab-syms.c stabs.c syms.c targets.c \
+	section.c simple.c stab-syms.c stabs.c strtab.c syms.c targets.c \
 	binary.c ihex.c srec.c tekhex.c verilog.c
 
 BFD64_LIBS_CFILES = archive64.c
@@ -404,6 +404,7 @@ BFD32_BACKENDS = \
 	i386mach3.lo \
 	i386msdos.lo \
 	i386netbsd.lo \
+	i386omf.lo \
 	i386os9k.lo \
 	ieee.lo \
 	m68k4knetbsd.lo \
@@ -597,6 +598,7 @@ BFD32_BACKENDS_CFILES = \
 	i386mach3.c \
 	i386msdos.c \
 	i386netbsd.c \
+	i386omf.c \
 	i386os9k.c \
 	ieee.c \
 	m68k4knetbsd.c \
@@ -810,7 +812,7 @@ SOURCE_HFILES = \
 	libaout.h libbfd.h libcoff.h libecoff.h libhppa.h libieee.h \
 	libnlm.h liboasys.h libpei.h libxcoff.h mach-o.h \
 	netbsd.h nlm-target.h nlmcode.h nlmswap.h ns32k.h \
-	pef.h pef-traceback.h peicode.h som.h version.h \
+	pef.h pef-traceback.h peicode.h som.h strtab.h version.h \
 	vms.h xsym.h
 
 ## ... and all .h files which are in the build tree.
