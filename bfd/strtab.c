@@ -1,6 +1,6 @@
+#include "sysdep.h"
 #include "bfd.h"
 #include "strtab.h"
-#include "sysdep.h"
 #include "libbfd.h"
 #include "strtab.h"
 
